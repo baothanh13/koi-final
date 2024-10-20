@@ -1,3 +1,166 @@
-.home-page{
-    height: 1000px;
+.container-home-page {
+}
+
+.box-banner {
+  background-image: url("../../../assets/imgs/banner-home-page.png");
+  height: 120vh;
+  padding-top: 78px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.box-title-banner {
+  width: 50vw;
+  color: #fff;
+}
+
+.title-banner {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.box-parameter {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-parameter {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.title-parameter {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.discovery-now {
+  height: 38px;
+  padding: 0 20px;
+  background-color: #b81010;
+  border: 0;
+  color: #fff;
+}
+
+.box-advantage {
+  background-color: #f5f5f5;
+  padding: 64px 0;
+}
+
+.title-service,
+.title-box-advantage,
+.title-partner {
+  text-align: center;
+  margin: 0px 0 40px;
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box-item-advantage {
+  display: flex;
+  gap: 14px;
+  padding: 0 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-advantage {
+  width: 23%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.title-card-advantage {
+  font-weight: 600;
+}
+
+.index-card-service {
+  font-size: 5.8rem;
+  color: #003b82;
+  position: absolute;
+  top: -44px;
+  left: 20px;
+  z-index: 990;
+}
+
+.box-service {
+  padding: 64px 60px 0;
+}
+
+.card-item-service {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 60px 0;
+}
+
+.box-content-card-service {
+  position: relative;
+}
+
+.banner-card-service img {
+  width: 60vw;
+}
+
+.content-card-service {
+  background: #ffffffe0;
+  padding: 40px;
+  width: 60vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+}
+
+.content-card-service-odd {
+    margin-left: -110px;
+}
+
+.content-card-service-even {
+    margin-right: -110px;
+}
+
+.title-card-service {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.box-partner {
+    padding: 64px 60px;
+}
+
+.box-list-logo-partner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-partner {
+    width: 22%;
+    text-align: center;
+}
+
+.logo-partner img {
+    transition: transform 0.3s ease; 
+}
+
+.logo-partner img:hover {
+    transform: scale(1.4); 
+}
+
+.box-banner-footer {
+    background-image: url('../../../assets/imgs/banner-footer-home-page.png');
+    height: 360px;
 }
