@@ -1,5 +1,8 @@
-import "./index.css";
+import styles from "./index.module.css";
+import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
+
+const cx = classNames.bind(styles);
 
 const Logo = () => (
   <svg
@@ -62,30 +65,28 @@ const Logo = () => (
 function Header() {
   return (
     <header>
-      <div className="container-header">
-        <div className="logo-header">
-          <Link to="/">
+      <div className={cx("container-header")}>
+        <div className={cx("logo-header")}>
+          <Link to="/" aria-label="Trang chủ">
             <Logo />
           </Link>
         </div>
-        <div className="menu-header">
-          <button className="item-menu-header">Công ty</button>
-          <button className="item-menu-header" data-tooltip-id="my-tooltip">
-            Dịch vụ
-          </button>
-          <Link to="/follow-order" className="item-menu-header">
+        <div className={cx("menu-header")}>
+          <button className={cx("item-menu-header")}>Công ty</button>
+          <button className={cx("item-menu-header")} data-tooltip-id="my-tooltip">Dịch vụ</button>
+          <Link to="/follow-order" className={cx("item-menu-header")} aria-label="Theo dõi đơn hàng">
             Theo dõi đơn hàng
           </Link>
-          <button className="item-menu-header">Tài nguyên</button>
-          <Link to="/help" className="item-menu-header">
+          <button className={cx("item-menu-header")}>Tài nguyên</button>
+          <Link to="/help" className={cx("item-menu-header")} aria-label="Hỗ trợ">
             Hỗ trợ
           </Link>
         </div>
-        <div className="action-header">
-          <Link to="/login" className="item-menu-header">
+        <div className={cx("action-header")}>
+          <Link to="/login" className={cx("item-menu-header")} aria-label="Đăng nhập">
             Đăng nhập
           </Link>
-          <Link to="/contact" className="item-menu-header header-contact ">
+          <Link to="/contact" className={cx("item-menu-header", "header-contact")} aria-label="Liên hệ">
             Liên hệ
           </Link>
         </div>

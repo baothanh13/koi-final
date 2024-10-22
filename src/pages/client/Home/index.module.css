@@ -147,18 +147,18 @@
     flex-wrap: wrap;
 }
 
-.logo-partner {
+.logo-partner-home-page {
     width: 22%;
     text-align: center;
 }
 
-.logo-partner img {
+.img-logo-partner-home-page {
     transition: transform 0.3s ease; 
 }
 
-.logo-partner img:hover {
+.img-logo-partner-home-page:hover {
     transform: scale(1.4); 
-}
+} 
 
 .box-banner-footer {
     background-image: url('../../../assets/imgs/banner-footer-home-page.png');
