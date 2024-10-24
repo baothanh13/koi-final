@@ -1,57 +1,72 @@
 import React from "react";
-import "./index.module.css";
 import { Link } from "react-router-dom";
+import styles from "./index.module.css";
+import classNames from "classnames/bind";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCartShopping,
+  faGear,
+  faPen,
+  faTruckFast,
+} from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 
-function Sidebar({ name, id }) {
+const cx = classNames.bind(styles);
+
+function Sidebar({ name }) {
   return (
-    <div className="sidebar">
-      <div className="profile-section">
-        <h3>{name}</h3>
-        <p className="verified-badge">Verified</p>
-        <Link className="edit-profile-link" to={`/account/infor/${id}`}>
-          Edit profile
-        </Link>
+    <div className={cx("sidebar")}>
+      <div className={cx("box-item-sidebar")}>
+        <div className={cx("box-profile-customer")}>
+          <div>
+            <FontAwesomeIcon size="3x" icon={faUserCircle} />
+          </div>
+          <div>
+            <h2 className={cx("name-customer")}>{name}</h2>
+            <Link
+              className={cx("edit-profile-link")}
+              to={`/account/infor`}
+            >
+              <FontAwesomeIcon icon={faPen} /> Edit profile
+            </Link>
+          </div>
+        </div>
       </div>
 
-      <div className="section services">
-        <h4>Services</h4>
-        <ul>
-          <li>
-            <a href="/orders">My orders</a>
+      <div className={cx("box-item-sidebar", "services")}>
+        <p className={cx("title-default")}>Services</p>
+        <ul className={cx("list-service")}>
+          <li className={cx("item-service")}>
+            <Link className={cx("link-item-service")} to={`/account/my-order`}>
+              <div className={cx("icon-item-service")}>
+                <FontAwesomeIcon icon={faCartShopping} />
+              </div>
+              My Orders
+            </Link>
           </li>
-          <li>
-            <a href="/vouchers">Voucher</a>
+          <li className={cx("item-service")}>
+            <Link
+              className={cx("link-item-service")}
+              to={`/account/create-shipment`}
+            >
+              <div className={cx("icon-item-service")}>
+                <FontAwesomeIcon icon={faTruckFast} />
+              </div>
+              Create Shipmment
+            </Link>
           </li>
-          <li>
-            <a href="/product-search">Product Search</a>
+          <li className={cx("item-service")}>
+            <Link
+              className={cx("link-item-service")}
+              to={`/account/infor`}
+            >
+              <div className={cx("icon-item-service")}>
+                <FontAwesomeIcon icon={faGear} />
+              </div>
+              Settings
+            </Link>
           </li>
         </ul>
-      </div>
-
-      <div className="section express">
-        <h4>Express</h4>
-        <ul>
-          <li>
-            <a href="/create-package">Create package</a>
-          </li>
-          <li>
-            <a href="/create-shipment">Create shipment</a>
-          </li>
-          <li>
-            <a href="/manage-package">Manage package/shipment</a>
-          </li>
-          <li>
-            <a href="/warehouse-info">Warehouse information</a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Wallet section */}
-      <div className="section wallet">
-        <h4>Wallet</h4>
-        <p>
-          <a href="/my-points">My points</a>: 0 points
-        </p>
       </div>
     </div>
   );

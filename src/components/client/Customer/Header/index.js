@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./index.module.css";
+import styles from "./index.module.css";
+import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import {
   faCartShopping,
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faUser, faUserCircle } from "@fortawesome/free-regular-svg-icons";
 
 const Logo = () => (
   <svg
@@ -65,27 +66,29 @@ const Logo = () => (
   </svg>
 );
 
-function Header({ name, id }) {
+const cx = classNames.bind(styles);
+
+function Header({ name }) {
   return (
     <header>
-      <div className="container-header">
-        <div className="logo-header">
-          <Link to={`/account/${id}`}>
+      <div className={cx("container-header")}>
+        <div className={cx("logo-header")}>
+          <Link to={`/account`}>
             <Logo />
           </Link>
         </div>
-        <div className="box-content-account">
-          <div className="account-user">
+        <div className={cx("box-content-account")}>
+          <div className={cx("account-user")}>
             <button
-              className="item-menu-header"
+              className={cx("item-menu-header")}
               data-tooltip-id="tooltip-account"
             >
-              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon size="lg" icon={faUserCircle} />
               {name}
-              <FontAwesomeIcon icon={faChevronDown} />
+              <FontAwesomeIcon size="xs" icon={faChevronDown} />
             </button>
           </div>
-          <Link to={`/account/cart/${id}`}>
+          <Link className={cx("icon-cart-shopping")} to={`/account/my-order`}>
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
         </div>

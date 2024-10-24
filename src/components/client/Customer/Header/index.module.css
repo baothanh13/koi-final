@@ -1,3 +1,36 @@
+.container-header {
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+
+.logo-header {
+  padding-top: 10px;
+}
 .box-content-account {
-    display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.item-menu-header {
+  display: flex;
+  background-color: #fff;
+  border: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 10px;
+  gap: 10px;
+  cursor: pointer;
+  border-right: 2px solid #efefef;
+  margin-right: 10px;
+}
+
+.icon-cart-shopping {
+  color: #333;
 }

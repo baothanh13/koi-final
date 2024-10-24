@@ -8,6 +8,6 @@ import Account from "../pages/client/Customer/Account/Account";
 // Public routes
 const publicRoutes = [{ path: "/", component: Home }];
 
-const privateRoutes = [{ path: "/account/:id", component: Account }, { path: "/account/infor/:id", component: Infor }];
+const privateRoutes = [{ path: "/account", component: Account }, { path: "/account/infor", component: Infor }];
 
 export { publicRoutes, privateRoutes };
