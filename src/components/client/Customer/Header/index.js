@@ -6,7 +6,7 @@ import {
   faCartShopping,
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { faUser, faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 
 const Logo = () => (
   <svg
@@ -68,12 +68,13 @@ const Logo = () => (
 
 const cx = classNames.bind(styles);
 
-function Header({ name }) {
+function Header() {
+  const name = 'admin';
   return (
     <header>
       <div className={cx("container-header")}>
         <div className={cx("logo-header")}>
-          <Link to={`/account`}>
+          <Link to={`/customer`}>
             <Logo />
           </Link>
         </div>
@@ -88,7 +89,7 @@ function Header({ name }) {
               <FontAwesomeIcon size="xs" icon={faChevronDown} />
             </button>
           </div>
-          <Link className={cx("icon-cart-shopping")} to={`/account/my-order`}>
+          <Link className={cx("icon-cart-shopping")} to={`/customer/my-order`}>
             <FontAwesomeIcon icon={faCartShopping} />
           </Link>
         </div>
