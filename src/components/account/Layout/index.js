@@ -1,15 +1,8 @@
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import styles from "./index.module.css";
 import classNames from "classnames/bind";
-import { Link } from "react-router-dom";
-import {
-  faArrowRightFromBracket,
-  faCartShopping,
-  faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
-import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
-import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
+
+const cx = classNames.bind(styles);
 
 const Logo = () => (
   <svg
@@ -69,79 +62,17 @@ const Logo = () => (
   </svg>
 );
 
-const cx = classNames.bind(styles);
-
-function Header() {
-  const [showPopup, setShowPopup] = useState(false);
-  const name = "admin";
-
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
-
-  const handleLogout = () => {
-    console.log("User logged out");
-    setShowPopup(false);
-  };
-
+function Layout({ children }) {
   return (
-    <header>
-      <div className={cx("container-header")}>
-        <div className={cx("logo-header")}>
-          <Link to={`/customer`}>
-            <Logo />
-          </Link>
+    <div className={cx("background-layout")}>
+      <div className={cx("container-main-account")}>
+        <div className={cx("head-logo")}>
+          <Logo />
         </div>
-        <div className={cx("box-content-account")}>
-          <div className={cx("account-user")}>
-            <button
-              className={cx("item-menu-header")}
-              data-tooltip-id="tooltip-account"
-              onClick={togglePopup}
-            >
-              <FontAwesomeIcon size="lg" icon={faUserCircle} />
-              {name}
-              <FontAwesomeIcon size="xs" icon={faChevronDown} />
-            </button>
-            {showPopup && (
-              <div className={cx("popup-menu")}>
-                <div className={cx("popup-welcome-user")}>
-                  <FontAwesomeIcon size="2x" icon={faUserCircle} />
-                  Hello, {name}
-                </div>
-                <Link className={cx("popup-menu-item")} to={`/customer/infor`}>
-                  <div className={cx("icon-item-popup")}>
-                    <FontAwesomeIcon icon={faUser} />
-                  </div>
-                  Infor
-                </Link>
-                <Link
-                  style={{ paddingBottom: "10px" }}
-                  className={cx("popup-menu-item")}
-                  to={`/customer/my-order`}
-                >
-                  <div className={cx("icon-item-popup")}>
-                    <FontAwesomeIcon icon={faCartShopping} />
-                  </div>
-                  My Order
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className={cx("logout-button", "popup-menu-item")}
-                >
-                  <FontAwesomeIcon icon={faArrowRightFromBracket} />
-                  Log Out
-                </button>
-              </div>
-            )}
-          </div>
-          <Link className={cx("icon-cart-shopping")} to={`/customer/my-order`}>
-            <FontAwesomeIcon icon={faCartShopping} />
-          </Link>
-        </div>
+        {children}
       </div>
-    </header>
+    </div>
   );
 }
 
-export default Header;
+export default Layout;
