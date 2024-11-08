@@ -1,5 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-color: #00194f;
+  --header-height: 70px;
 }
 
 * {
@@ -9,12 +14,24 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 16px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.5;
   text-rendering: optimizespeed;
+}
+
+.container {
+  max-width: 1176px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-gray-10 {
+    --tw-text-opacity: 1;
+    color: rgb(38 38 38 / var(--tw-text-opacity));
 }

@@ -11,20 +11,22 @@ import SignUp from "../pages/account/SignUp";
 
 //Account
 import Login from "../pages/account/Login";
+import AboutUs from "../pages/client/AboutUs";
 
 // Public routes
-const publicRoutes = [{ path: "/", component: Home }];
+const publicRoutes = [{path: "/", component: Home}];
 
 const privateRoutes = [
-  { path: "/customer/", component: MyOrder },
-  { path: "/customer/infor", component: Infor },
-  { path: "/customer/change-password", component: ChangePassword },
-  { path: "/customer/my-order", component: MyOrder },
-  { path: "/customer/create-shipment", component: CreateShipment },
-  { path: "/login", component: Login },
-  { path: "/forgot-password", component: ForGot },
-  { path: "/sign-up", component: SignUp },
-  
+    {path: "/customer/", component: MyOrder},
+    {path: "/customer/infor", component: Infor},
+    {path: "/customer/change-password", component: ChangePassword},
+    {path: "/customer/my-order", component: MyOrder},
+    {path: "/customer/create-shipment", component: CreateShipment},
+    {path: "/login", component: Login},
+    {path: "/forgot-password", component: ForGot},
+    {path: "/sign-up", component: SignUp},
+    {path: "/about-us", component: AboutUs},
+
 ];
 
-export { publicRoutes, privateRoutes };
+export {publicRoutes, privateRoutes};
