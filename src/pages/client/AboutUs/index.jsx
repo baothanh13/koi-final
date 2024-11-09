@@ -1,9 +1,9 @@
 import styles from "./index.module.css";
 import classNames from "classnames/bind";
 import MainLayout from "../../../components/client/MainLayout";
-import {routerName} from "../../../routes/routerName";
+import {routerName} from "routes/routerName";
 import NavTabs from "../../../components/client/NavTabs";
-import {useRef, useState} from "react";
+import {useRef} from "react";
 import frameImage from "../../../assets/imgs/Frame_19193_b0841cd74d.webp";
 import group1713 from "../../../assets/imgs/Group_17_1_3fe8667138.webp";
 import rectangle6548 from "../../../assets/imgs/Rectangle_6548_45a194512b.webp";
@@ -20,13 +20,13 @@ import rectangle1319f134d95f8 from "../../../assets/imgs/Rectangle_13_1_9f134d95
 import Rectangle132303bcd474d from "../../../assets/imgs/Rectangle_13_2_303bcd474d.webp";
 import rectangle1330d08e5806a from "../../../assets/imgs/Rectangle_13_3_0d08e5806a.webp";
 import rectangle134f8c38aa75c from "../../../assets/imgs/Rectangle_13_4_f8c38aa75c.webp";
-import group18841e2a79e3d0b from "../../../assets/imgs/Group_18841_e2a79e3d0b.svg";
-import icon5f3805f339 from "../../../assets/imgs/icon_5f3805f339.svg";
-import icon17158dbcc64 from "../../../assets/imgs/icon_1_7158dbcc64.svg";
-import icon247275e8b80 from "../../../assets/imgs/icon_2_47275e8b80.svg";
-import icon38269b85b8a from "../../../assets/imgs/icon_3_8269b85b8a.svg";
-import group18850221073c314 from "../../../assets/imgs/Group_18850_221073c314.svg";
-import {Slide} from "react-slideshow-image";
+import group18841e2a79e3d0b from "assets/svg/Group_18841_e2a79e3d0b.svg";
+import icon5f3805f339 from "assets/svg/icon_5f3805f339.svg";
+import icon17158dbcc64 from "assets/svg/icon_1_7158dbcc64.svg";
+import icon247275e8b80 from "assets/svg/icon_2_47275e8b80.svg";
+import icon38269b85b8a from "assets/svg/icon_3_8269b85b8a.svg";
+import group18850221073c314 from "assets/svg/Group_18850_221073c314.svg";
+import ContentSlider from "components/commons/ContentSlider";
 
 const cx = classNames.bind(styles);
 
@@ -104,6 +104,69 @@ const safetySecurityData = [
     },
 ];
 
+const slider = [
+    {
+        src: slide1,
+        title: "Vận chuyển xuyên biên giới nhanh chóng",
+        desc: "Hệ thống vận tải tiên tiến và hiện đại của Ezbuy " +
+            "Japan đáp ứng được mọi nhu cầu vận chuyển. Các chuyến " +
+            "bay đi đều, trung bình 5 chuyến/tuần, đảm bảo vận chuyển " +
+            "hàng hóa đến mọi nơi trên toàn thế giới trong thời gian sớm nhất có thể."
+    },
+    {
+        src: slide2,
+        title: "Mạng lưới kho vận dày đặc",
+        desc: "Ngoài việc sở hữu hệ thống cross-docking và kho ngoại " +
+            "quan lớn tại Nhật Bản, Mỹ và Việt Nam. Ezbuy Japan cũng " +
+            "liên kết và mở rộng mạng lưới kho vận khổng lồ từ các đối " +
+            "tác trên toàn cầu để đảm bảo lưu trữ hàng hóa an toàn và giảm " +
+            "chi phí vận chuyển trong thời gian dài."
+    },
+    {
+        src: slide3,
+        title: "Theo dõi đơn hàng theo thời gian thực",
+        desc: "Ezbuy Japan đẩy thông tin vận chuyển từ nhiều hãng vận " +
+            "chuyển vào bảng điều khiển hợp nhất thông qua API, cho phép " +
+            "người dùng dễ dàng theo dõi hành trình đơn hàng từ khi xác " +
+            "nhận vận chuyển đến khi giao hàng thành công."
+    },
+    {
+        src: slide4,
+        title: "Mua sỉ hàng hóa từ Nhật",
+        desc: "Các doanh nghiệp sử dụng dịch vụ mua hàng sỉ của Ezbuy " +
+            "Japan đều sẽ được các chính sách ưu đãi nhất để tối ưu hóa " +
+            "chi phí kinh doanh. Chúng tôi có khả năng đàm phán và thỏa " +
+            "thuận với các nhà cung cấp tại Nhật để áp dụng các mức giá " +
+            "khác nhau, đặc biệt là giá ưu đãi cho các đơn đặt hàng số lượng lớn."
+    },
+    {
+        src: slide5,
+        title: "Thông quan nhanh chóng & an toàn",
+        desc: "Ezbuy Japan cung cấp các giấy tờ khai báo hải quan có thể " +
+            "điền trực tiếp trên website, đi kèm các tài liệu bổ sung để " +
+            "sẵn sàng tải xuống khi có yêu cầu. Điều này góp phần tránh " +
+            "sai sót và làm cho toàn bộ quy trình thông quan trở nên an " +
+            "toàn, minh bạch và rõ ràng ở tất các các bước."
+    },
+    {
+        src: slide6,
+        title: "Xử lý đơn hàng ngay trong ngày",
+        desc: "Ezbuy Japan tích hợp hệ thống quản lý đơn hàng hiện đại " +
+            "bậc nhất với các trang thương mại điện tử hàng đầu Nhật Bản. " +
+            "Thông qua dữ liệu chi tiết từ hệ thống, các đơn hàng đều được " +
+            "xử lý chính xác, chuyên nghiệp và nhanh chóng ngay sau khi có khách đặt hàng."
+    },
+    {
+        src: slide7,
+        title: "Bán hàng tại Nhật",
+        desc: "Hỗ trợ từ A đến Z các thương nhân thâm nhập, " +
+            "bán hàng và phát triển mạnh tại thị trường Nhật Bản " +
+            "từ việc tạo tài khoản bán hàng, lưu trữ hàng tồn kho " +
+            "và xử lý đơn đặt hàng đến vận chuyển tận tay khách hàng " +
+            "ngay trong ngày hôm sau."
+    }
+];
+
 const breadcrumbs = [
     routerName.home,
     routerName.aboutUs,
@@ -114,10 +177,6 @@ function AboutUs() {
     const refOurStrength = useRef(null);
     const refCulture = useRef(null);
     const refSafetySecurity = useRef(null);
-
-    const slideRef = useRef();
-
-    const [slideIndex, setSlideIndex] = useState(0);
 
     const navItems = [
         {
@@ -138,83 +197,8 @@ function AboutUs() {
         }
     ];
 
-    const slider = [
-        {
-            src: slide1,
-            title: "Vận chuyển xuyên biên giới nhanh chóng",
-            desc: "Hệ thống vận tải tiên tiến và hiện đại của Ezbuy " +
-                "Japan đáp ứng được mọi nhu cầu vận chuyển. Các chuyến " +
-                "bay đi đều, trung bình 5 chuyến/tuần, đảm bảo vận chuyển " +
-                "hàng hóa đến mọi nơi trên toàn thế giới trong thời gian sớm nhất có thể."
-        },
-        {
-            src: slide2,
-            title: "Mạng lưới kho vận dày đặc",
-            desc: "Ngoài việc sở hữu hệ thống cross-docking và kho ngoại " +
-                "quan lớn tại Nhật Bản, Mỹ và Việt Nam. Ezbuy Japan cũng " +
-                "liên kết và mở rộng mạng lưới kho vận khổng lồ từ các đối " +
-                "tác trên toàn cầu để đảm bảo lưu trữ hàng hóa an toàn và giảm " +
-                "chi phí vận chuyển trong thời gian dài."
-        },
-        {
-            src: slide3,
-            title: "Theo dõi đơn hàng theo thời gian thực",
-            desc: "Ezbuy Japan đẩy thông tin vận chuyển từ nhiều hãng vận " +
-                "chuyển vào bảng điều khiển hợp nhất thông qua API, cho phép " +
-                "người dùng dễ dàng theo dõi hành trình đơn hàng từ khi xác " +
-                "nhận vận chuyển đến khi giao hàng thành công."
-        },
-        {
-            src: slide4,
-            title: "Mua sỉ hàng hóa từ Nhật",
-            desc: "Các doanh nghiệp sử dụng dịch vụ mua hàng sỉ của Ezbuy " +
-                "Japan đều sẽ được các chính sách ưu đãi nhất để tối ưu hóa " +
-                "chi phí kinh doanh. Chúng tôi có khả năng đàm phán và thỏa " +
-                "thuận với các nhà cung cấp tại Nhật để áp dụng các mức giá " +
-                "khác nhau, đặc biệt là giá ưu đãi cho các đơn đặt hàng số lượng lớn."
-        },
-        {
-            src: slide5,
-            title: "Thông quan nhanh chóng & an toàn",
-            desc: "Ezbuy Japan cung cấp các giấy tờ khai báo hải quan có thể " +
-                "điền trực tiếp trên website, đi kèm các tài liệu bổ sung để " +
-                "sẵn sàng tải xuống khi có yêu cầu. Điều này góp phần tránh " +
-                "sai sót và làm cho toàn bộ quy trình thông quan trở nên an " +
-                "toàn, minh bạch và rõ ràng ở tất các các bước."
-        },
-        {
-            src: slide6,
-            title: "Xử lý đơn hàng ngay trong ngày",
-            desc: "Ezbuy Japan tích hợp hệ thống quản lý đơn hàng hiện đại " +
-                "bậc nhất với các trang thương mại điện tử hàng đầu Nhật Bản. " +
-                "Thông qua dữ liệu chi tiết từ hệ thống, các đơn hàng đều được " +
-                "xử lý chính xác, chuyên nghiệp và nhanh chóng ngay sau khi có khách đặt hàng."
-        },
-        {
-            src: slide7,
-            title: "Bán hàng tại Nhật",
-            desc: "Hỗ trợ từ A đến Z các thương nhân thâm nhập, " +
-                "bán hàng và phát triển mạnh tại thị trường Nhật Bản " +
-                "từ việc tạo tài khoản bán hàng, lưu trữ hàng tồn kho " +
-                "và xử lý đơn đặt hàng đến vận chuyển tận tay khách hàng " +
-                "ngay trong ngày hôm sau."
-        }
-    ];
-
-    const goToNext = () => {
-        slideRef.current.goNext();
-    };
-
-    const goToPrev = () => {
-        slideRef.current.goBack();
-    };
-
-    const onStartChangeSlide = (from, to) => {
-        setSlideIndex(to);
-    }
-
     return (
-        <MainLayout title={"abc"} breadcrumbs={breadcrumbs}>
+        <MainLayout title={routerName.aboutUs.title} breadcrumbs={breadcrumbs}>
             <NavTabs navItems={navItems}>
                 <div ref={refWhoWeAre} className={cx("item")}>
                     <p className={cx("title", "text-center")}>Chúng tôi là ai?</p>
@@ -399,63 +383,8 @@ function AboutUs() {
                         Cùng tìm hiểu xem điều gì khiến Ezbuy Japan trở thành một trong những nhà hỗ trợ thương mại điện
                         tử hàng đầu cho các doanh nghiệp nước ngoài tại Nhật Bản.
                     </p>
-                    <div
-                        className={cx("grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4  bg-white p-[2rem] font-medium text-[0.88rem]", "shadow-3")}>
-                        <p>1. Vận chuyển xuyên biên giới nhanh chóng</p>
-                        <p>2. Mạng lưới kho vận dày đặc</p>
-                        <p>3. Theo dõi đơn hàng theo thời gian thực</p>
-                        <p>4. Mua sỉ hàng hóa từ Nhật</p>
-                        <p>5. Thông quan nhanh chóng & an toàn</p>
-                        <p>6. Xử lý đơn hàng ngay trong ngày</p>
-                    </div>
-                    <div
-                        className={cx("bg-[#00194F] max-w-[528px] px-4 py-2 flex items-start lg:items-center justify-between")}>
-                        <div className={cx("flex h-10 lg:h-auto")}>
-                            <p className={cx("text-white text-sm font-bold lg:text-base uppercase")}>7.</p>
-                            <p className={cx("text-white text-sm lg:text-base font-bold uppercase ml-1")}>
-                                Bán hàng tại Nhật
-                            </p>
-                        </div>
-                        <div className={cx("ml-3 flex")}>
-                            <button className={cx("w-10 h-10", "bg-gray-1")} onClick={goToPrev}>
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
-                                     className={cx("svg-inline--fa fa-chevron-left ")} role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" color="white" height="24"
-                                     width="24">
-                                    <path fill="currentColor"
-                                          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
-                                </svg>
-                            </button>
-                            <button className={cx("w-10 h-10 ml-2", "bg-gray-1")} onClick={goToNext}>
-                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
-                                     className={cx("svg-inline--fa fa-chevron-right")} role="img"
-                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" color="white" height="24"
-                                     width="24">
-                                    <path fill="currentColor"
-                                          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div className={cx("mt-4")}>
-                        <Slide ref={slideRef} slidesToScroll={1} slidesToShow={3} arrows={false}
-                               onStartChange={onStartChangeSlide}
-                               cssClass={cx("slider-container")}>
-                            {slider.map((item, index) => {
-                                return (
-                                    <div key={index} className={cx("each-slide ml-4")}>
-                                        <img src={item.src ?? ""} alt="slide"
-                                             className={cx("w-auto h-auto lg:w-[444px] lg:h-[222px] mr-2")}/>
-                                    </div>
-                                );
-                            })}
-                        </Slide>
-                    </div>
-                    <div
-                        className={cx("mt-2 p-4 bg-white max-w-[528px] h-[234px] ", "shadow-2")}>
-                        <p className={cx("text-lg font-bold uppercase")}>{slider[slideIndex].title}</p>
-                        <p className={cx("mt-3 text-black text-sm font-normal")}>{slider[slideIndex].desc}</p>
-                    </div>
+
+                    <ContentSlider slider={slider}/>
                 </div>
                 <div ref={refCulture} className={cx("mt-20 lg:mt-[120px]", "container")}>
                     <p className={cx("title", "text-start")}>Văn hóa</p>
@@ -466,8 +395,8 @@ function AboutUs() {
                     <div className={cx("mt-6 lg:mt-[52px] flex lg:items-start lg:justify-center")}>
                         <div className={cx("container")}>
                             <div>
-                                {cultures.map((item) => (
-                                    <div>
+                                {cultures.map((item, index) => (
+                                    <div key={index}>
                                         <div className={cx("flex flex-col lg:flex-row lg:gap-x-6")}>
                                             <p className={cx("text-lg font-bold text-black lg:basis-2/5")}>
                                                 {item.title}
@@ -492,8 +421,8 @@ function AboutUs() {
                     </p>
 
                     <div className={cx("mt-8 lg:mt-[58px] grid grid-cols-1 lg:grid-cols-3 lg:gap-y-2")}>
-                        {safetySecurityData.map((item) => (
-                            <div
+                        {safetySecurityData.map((item, index) => (
+                            <div key={index}
                                 className={cx("flex flex-col pr-4 lg:hover:shadow-[0px_4px_12px_rgba(0,_0,_0,_0.24)] py-4 lg:p-4 hover:transition-all hover:duration-300 hover:ease-linear ")}>
                                 <img src={item.src ?? ""} alt="slide"
                                      className={cx("w-10 h-10 self-center text-transparent")}/>
