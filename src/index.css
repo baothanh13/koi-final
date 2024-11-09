@@ -36,6 +36,33 @@ body {
     margin-left: auto;
 }
 
+.react-tel-input {
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 @layer utilities {
     .absolute-center {
         left: 50%;
@@ -54,7 +81,7 @@ body {
     }
 
     .shadow-5 {
-        --tw-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+        --tw-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
     }
 
     .shadow-5, .shadow-6 {
@@ -95,5 +122,10 @@ body {
 
     .leading-9 {
         line-height: 2.25rem
+    }
+
+    .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
 }

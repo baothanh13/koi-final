@@ -60,16 +60,16 @@ const slider = [
 
 const OrderCreate = () => {
     return (
-        <section className="relative">
+        <section className={cx("relative")}>
             <section
-                className="relative h-[720px] bg-cover flex flex-col justify-end mb-[-35%] md:mb-[-15%] lg:mb-[-12%]"
+                className={cx("relative h-[720px] bg-cover flex flex-col justify-end mb-[-35%] md:mb-[-15%] lg:mb-[-12%]")}
                 style={{background: `linear-gradient(rgba(0, 25, 79, 0) 0%, rgb(0, 25, 79) 200%), url(${Rectangle_6548_1_1c11cc53d9}) center center / cover no-repeat`}}>
-                <div className="container px-4 lg:px-0 flex flex-col justify-end relative">
-                    <div className="py-20 text-white">
-                        <h2 className="text-2xl lg:text-4xl leading-9 lg:leading-54 font-black uppercase">
+                <div className={cx("container px-4 lg:px-0 flex flex-col justify-end relative")}>
+                    <div className={cx("py-20 text-white")}>
+                        <h2 className={cx("text-2xl lg:text-4xl leading-9 lg:leading-54 font-black uppercase")}>
                             Tạo lô hàng vận chuyển xuyên biên giới
                         </h2>
-                        <p className="text-sm lg:text-base">
+                        <p className={cx("text-sm lg:text-base")}>
                             Khởi tạo một lô hàng để vận chuyển xuyên biên giới là một quá trình nhiều bước, liên quan
                             đến nhiều khâu và nhiều thủ tục phải chuẩn bị.
                         </p>

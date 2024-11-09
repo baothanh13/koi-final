@@ -190,7 +190,7 @@ function CrossBorderEcommerce() {
                         </div>
                         <div
                             className={cx("flex flex-grow lg:flex-grow-0 lg:items-center gap-4 lg:gap-6 flex-col lg:flex-row")}>
-                            <a target="_blank" role="button"
+                            <a target="_blank" rel="noreferrer" role="button"
                                className={cx("flex-1 bg-[#DAE3F4] rounded-lg py-3 px-5 flex items-center")}
                                href="https://play.google.com/store/apps/details?id=com.ezbuyrn">
                                 <img src={Group_16372_e40a7a9cda ?? ""} alt="Group_16372_e40a7a9cda"
@@ -200,7 +200,7 @@ function CrossBorderEcommerce() {
                                     <p className={cx("font-bold text-sm")}>Google Play</p>
                                 </div>
                             </a>
-                            <a target="_blank" role="button"
+                            <a target="_blank" rel="noreferrer" role="button"
                                className={cx("text-transparent flex-1 bg-[#333A3F] rounded-lg py-3 px-5 flex items-center")}
                                href="https://apps.apple.com/us/app/janbox-cross-border-ecommerce/id1566543402">
                                 <img src={Group_16374_c70e71eb8b ?? ""} alt="Group_16374_c70e71eb8b"

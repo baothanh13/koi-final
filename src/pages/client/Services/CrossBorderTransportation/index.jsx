@@ -2,7 +2,6 @@ import styles from "./index.module.css";
 import classNames from "classnames/bind";
 import {routerName} from "routes/routerName";
 import MainLayout from "components/client/MainLayout";
-import {useInView} from "react-intersection-observer";
 import React, {useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faXmark} from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +15,6 @@ import IncludedService from "pages/client/Services/CrossBorderTransportation/inc
 import OrderCreate from "pages/client/Services/CrossBorderTransportation/orderCreate";
 import Group_16372_e40a7a9cda from "assets/svg/Group_16372_e40a7a9cda.svg";
 import Group_16374_c70e71eb8b from "assets/svg/Group_16374_c70e71eb8b.svg";
-import Mockup_Phone_bf073e5712 from "assets/imgs/Mockup_Phone_bf073e5712.webp";
 import android_d95853c77d from "assets/imgs/android_d95853c77d.webp";
 import ios_0dc6873008 from "assets/imgs/ios_0dc6873008.webp";
 import Group_1171276004_eae764ca2e from "assets/imgs/Group_1171276004_eae764ca2e.webp";
@@ -29,15 +27,8 @@ const breadcrumbs = [
 ];
 
 function CrossBorderTransportation() {
-    // Sử dụng react-intersection-observer để theo dõi xem phần tử có trong vùng nhìn không
-    const {ref: warehouseRef, inView: warehouseInView} = useInView({triggerOnce: true});
-    const {ref: countryRef, inView: countryInView} = useInView({triggerOnce: true});
-    const {ref: customerRef, inView: customerInView} = useInView({triggerOnce: true});
-    const {ref: orderRef, inView: orderInView} = useInView({triggerOnce: true});
-
     // Khởi tạo state để điều khiển hiển thị của overlay
     const [isOverlayVisible, setOverlayVisible] = useState(false);
-    const [isOverlayNewUserVisible, setOverlayNewUserVisible] = useState(false);
 
     // Hàm để xử lý bật overlay
     const showOverlay = () => {
@@ -47,16 +38,6 @@ function CrossBorderTransportation() {
     // Hàm để xử lý tắt overlay
     const hideOverlay = () => {
         setOverlayVisible(false);
-    };
-
-    // Hàm để xử lý bật overlay
-    const showOverlayNewUser = () => {
-        setOverlayNewUserVisible(true);
-    };
-
-    // Hàm để xử lý tắt overlay
-    const hideOverlayNewUser = () => {
-        setOverlayNewUserVisible(false);
     };
 
     return (
@@ -157,7 +138,7 @@ function CrossBorderTransportation() {
                         </div>
                         <div
                             className={cx("flex flex-grow lg:flex-grow-0 lg:items-center gap-4 lg:gap-6 flex-col lg:flex-row")}>
-                            <a target="_blank" role="button"
+                            <a target="_blank" rel="noreferrer" role="button"
                                className={cx("flex-1 bg-[#DAE3F4] rounded-lg py-3 px-5 flex items-center")}
                                href="https://play.google.com/store/apps/details?id=com.ezbuyrn">
                                 <img src={Group_16372_e40a7a9cda ?? ""} alt="Group_16372_e40a7a9cda"
@@ -167,7 +148,7 @@ function CrossBorderTransportation() {
                                     <p className={cx("font-bold text-sm")}>Google Play</p>
                                 </div>
                             </a>
-                            <a target="_blank" role="button"
+                            <a target="_blank" rel="noreferrer" role="button"
                                className={cx("text-transparent flex-1 bg-[#333A3F] rounded-lg py-3 px-5 flex items-center")}
                                href="https://apps.apple.com/us/app/janbox-cross-border-ecommerce/id1566543402">
                                 <img src={Group_16374_c70e71eb8b ?? ""} alt="Group_16374_c70e71eb8b"

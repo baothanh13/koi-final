@@ -2,6 +2,8 @@ import styles from "./index.module.css";
 import {Slide} from "react-slideshow-image";
 import classNames from "classnames/bind";
 import {useRef, useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
 
@@ -38,22 +40,10 @@ function ContentSlider({slider}) {
                 </div>
                 <div className={cx("ml-3 flex")}>
                     <button className={cx("w-10 h-10", "bg-gray-1")} onClick={goToPrev}>
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
-                             className={cx("svg-inline--fa fa-chevron-left ")} role="img"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" color="white" height="24"
-                             width="24">
-                            <path fill="currentColor"
-                                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
-                        </svg>
+                        <FontAwesomeIcon icon={faChevronLeft} className={cx("svg-inline--fa fa-chevron-left text-white")}/>
                     </button>
                     <button className={cx("w-10 h-10 ml-2", "bg-gray-1")} onClick={goToNext}>
-                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
-                             className={cx("svg-inline--fa fa-chevron-right")} role="img"
-                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" color="white" height="24"
-                             width="24">
-                            <path fill="currentColor"
-                                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path>
-                        </svg>
+                        <FontAwesomeIcon icon={faChevronRight} className={cx("svg-inline--fa fa-chevron-right text-white")}/>
                     </button>
                 </div>
             </div>

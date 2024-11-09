@@ -15,4 +15,8 @@ export const routerName = {
         slug: '/services/cross-border-shipping',
         title: 'Vận chuyển xuyên biên giới',
     },
+    contactSales: {
+        slug: '/contact-sales',
+        title: 'Liên hệ',
+    }
 }
