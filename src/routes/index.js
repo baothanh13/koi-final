@@ -14,6 +14,7 @@ import Login from "../pages/account/Login";
 import AboutUs from "../pages/client/AboutUs";
 import {routerName} from "./routerName";
 import CrossBorderEcommerce from "../pages/client/Services/CrossBorderEcommerce";
+import CrossBorderTransportation from "pages/client/Services/CrossBorderTransportation";
 
 // Public routes
 const publicRoutes = [{path: "/", component: Home}];
@@ -29,6 +30,7 @@ const privateRoutes = [
     {path: "/sign-up", component: SignUp},
     {path: "/about-us", component: AboutUs},
     {path: routerName.servicesCrossBorderEcommerce.slug, component: CrossBorderEcommerce},
+    {path: routerName.servicesCrossBorderTransportation.slug, component: CrossBorderTransportation},
 ];
 
 export {publicRoutes, privateRoutes};

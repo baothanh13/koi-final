@@ -11,4 +11,8 @@ export const routerName = {
         slug: '/services/cross-border-ecommerce',
         title: 'TMĐT xuyên biên giới',
     },
+    servicesCrossBorderTransportation: {
+        slug: '/services/cross-border-shipping',
+        title: 'Vận chuyển xuyên biên giới',
+    },
 }
