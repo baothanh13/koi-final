@@ -491,9 +491,10 @@ const ContactSales = () => {
                         </form>
                     </div>
                 </div>
-                <section className="flex flex-col lg:flex-row gap-5 px-4 lg:px-0 w-full py-6 lg:py-10 justify-end">
-                    <div className="lg:max-w-[395px]">
-                        <h2 className="font-bold text-xl lg:text-3xl mb-4">
+                <section
+                    className={cx("flex flex-col lg:flex-row gap-5 px-4 lg:px-0 w-full py-6 lg:py-10 justify-end")}>
+                    <div className={cx("lg:max-w-[395px]")}>
+                        <h2 className={cx("font-bold text-xl lg:text-3xl mb-4")}>
                             Hợp tác với các công ty lớn từ hơn 100 quốc gia
                         </h2>
                         <Link className={cx("text-[#F5222D] text-sm lg:text-base group block")} to="/">
@@ -505,7 +506,7 @@ const ContactSales = () => {
                     <div className={cx("lg:w-[60%] flex flex-col justify-center")}>
                         <div
                             className={cx("relative z-10 lg:[mask-image:linear-gradient(-90deg,_#FFF_96%,_rgba(_255,-255,_255,_0)_97%,_rgba(_255,_255,_255,_0.32)_110%)] flex flex-col gap-4 lg:gap-7")}>
-                            <div className="flex flex-col gap-y-10">
+                            <div className={cx("flex flex-col gap-y-10")}>
                                 <Slide
                                     ref={slideRef1}
                                     autoplay={false}
@@ -523,7 +524,7 @@ const ContactSales = () => {
                                     }}
                                 >
                                     {slideImages.map((url, index) => (
-                                        <div className="mx-20" key={index}>
+                                        <div className={cx("mx-20")} key={index}>
                                             <img src={url} alt={`Slide ${index + 1}`} style={{width: '100%'}}/>
                                         </div>
                                     ))}
@@ -541,7 +542,7 @@ const ContactSales = () => {
                                     slidesToShow={3}
                                 >
                                     {slideImages.reverse().map((url, index) => (
-                                        <div className="mx-20" key={index}>
+                                        <div className={cx("mx-20")} key={index}>
                                             <img src={url} alt={`Slide ${index + 1}`} style={{width: '100%'}}/>
                                         </div>
                                     ))}

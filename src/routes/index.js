@@ -1,6 +1,4 @@
 // Pages
-import Home from "../pages/client/Home";
-
 // Private
 import Infor from "../pages/client/Customer/Infor";
 import ChangePassword from "../pages/client/Customer/ChangePassword";
@@ -16,9 +14,16 @@ import {routerName} from "./routerName";
 import CrossBorderEcommerce from "../pages/client/Services/CrossBorderEcommerce";
 import CrossBorderTransportation from "pages/client/Services/CrossBorderTransportation";
 import ContactSales from "pages/client/ContactSales";
+import HomeBlog from "pages/client/HomeBlog";
 
 // Public routes
-const publicRoutes = [{path: "/", component: Home}];
+const publicRoutes = [
+    {path: routerName.home.slug, component: HomeBlog},
+    {path: routerName.aboutUs.slug, component: AboutUs},
+    {path: routerName.servicesCrossBorderEcommerce.slug, component: CrossBorderEcommerce},
+    {path: routerName.servicesCrossBorderTransportation.slug, component: CrossBorderTransportation},
+    {path: routerName.contactSales.slug, component: ContactSales},
+];
 
 const privateRoutes = [
     {path: "/customer/", component: MyOrder},
@@ -28,11 +33,7 @@ const privateRoutes = [
     {path: "/customer/create-shipment", component: CreateShipment},
     {path: "/login", component: Login},
     {path: "/forgot-password", component: ForGot},
-    {path: "/sign-up", component: SignUp},
-    {path: "/about-us", component: AboutUs},
-    {path: routerName.servicesCrossBorderEcommerce.slug, component: CrossBorderEcommerce},
-    {path: routerName.servicesCrossBorderTransportation.slug, component: CrossBorderTransportation},
-    {path: routerName.contactSales.slug, component: ContactSales},
+    {path: "/sign-up", component: SignUp}
 ];
 
 export {publicRoutes, privateRoutes};

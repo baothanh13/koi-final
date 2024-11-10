@@ -5,7 +5,7 @@ export const routerName = {
     },
     aboutUs: {
         slug: '/about-us',
-        title: 'About Us',
+        title: 'Công ty',
     },
     servicesCrossBorderEcommerce: {
         slug: '/services/cross-border-ecommerce',
