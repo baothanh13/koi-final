@@ -69,7 +69,7 @@
 }
 
 .item-advantage {
-  width: 23%;
+  width: 22%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -119,15 +119,14 @@
   width: 60vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-
 }
 
 .content-card-service-odd {
-    margin-left: -110px;
+  margin-left: -110px;
 }
 
 .content-card-service-even {
-    margin-right: -110px;
+  margin-right: -110px;
 }
 
 .title-card-service {
@@ -137,30 +136,30 @@
 }
 
 .box-partner {
-    padding: 64px 60px;
+  padding: 64px 60px;
 }
 
 .box-list-logo-partner {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .logo-partner-home-page {
-    width: 22%;
-    text-align: center;
+  width: 22%;
+  text-align: center;
 }
 
 .img-logo-partner-home-page {
-    transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .img-logo-partner-home-page:hover {
-    transform: scale(1.4); 
-} 
+  transform: scale(1.4);
+}
 
 .box-banner-footer {
-    background-image: url('../../../assets/imgs/banner-footer-home-page.png');
-    height: 360px;
+  background-image: url("../../../assets/imgs/banner-footer-home-page.png");
+  height: 360px;
 }
